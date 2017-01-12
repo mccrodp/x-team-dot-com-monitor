@@ -1,10 +1,9 @@
 before_script:
-  # Exit one errors.
+  # Exit one errors
   - set -e
 
   # Install Behat
   - cd ./behat
-  - cp behat.local.yml.example behat.local.yml
   - composer install
   - cd ..
 
@@ -15,9 +14,11 @@ before_script:
 
 
 script:
+  # Live Monitoring tests
   - cd ./behat
   - ./bin/behat --tags=~wip
   - cd ..
 
-  - cd ./visual-monitor
-  - PROVIDER_PREFIX=browserstack SELECTED_CAPS=chrome mocha
+  # Visual Regression tests
+  # - cd ./visual-monitor
+  # - PROVIDER_PREFIX=browserstack SELECTED_CAPS=chrome mocha
