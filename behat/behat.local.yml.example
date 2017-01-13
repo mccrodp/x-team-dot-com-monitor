@@ -1,7 +1,7 @@
 default:
   extensions:
     Behat\MinkExtension:
-      base_url: "https://x-team.com"
+      base_url: "http://138.197.88.198"
 
       ## Selenium integration
       # selenium2:
