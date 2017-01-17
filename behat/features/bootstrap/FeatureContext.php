@@ -23,6 +23,13 @@ class FeatureContext extends MinkContext implements SnippetAcceptingContext {
   }
 
   /**
+   * @When I visit the hirepage
+   */
+  public function iVisitTheHirepage() {
+    $this->getSession()->visit($this->locatePath('/hire/'));
+  }
+
+  /**
    * @Then I should have access to the page
    */
   public function iShouldHaveAccessToThePage() {
